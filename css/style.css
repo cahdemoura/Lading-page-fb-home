@@ -1,0 +1,242 @@
+:root {
+    --blue-color: #1877f2;
+    --green-color: #36a420;
+    --gray-color: #00000026;
+    --background-color: #f0f2f5;
+    --fonte-color: rgba(0, 0, 0, 0.4);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    column-gap: 120px;
+    background-color: var(--background-color);
+
+    padding-left: 20px;
+}
+
+.left {
+    margin-bottom: 80px;
+    max-width: 580px;
+}
+
+.left img {
+    height: 106px;
+    margin: -28px
+}
+
+.left h2 {
+    padding-top: 20px;
+    max-width: 500px;
+    font-size: 28px;
+    font-weight: normal;
+    text-align: left;
+    line-height: 32px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 396px;
+    row-gap: 30px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    width: 100%;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+
+    padding: 20px 20px;
+    box-shadow: 5px 5px 10px rgba(59, 59, 59, 0.301);
+}
+
+.login-form input {
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+
+    border-radius: 8px;
+    border: 1px solid var(--gray-color);
+
+    padding: 5px 20px;
+    font-size: 17px;
+    vertical-align: middle;
+    color: var(--fonte-color);
+}
+
+.login-form input:focus{
+    border: 1px solid var(--blue-color);
+    outline: none;
+}
+
+.div-line {
+    height: 1px;
+    width: 100%;
+    background-color: var(--gray-color);
+    border-radius: 50px;
+
+}
+
+.login-form input.enter-account {
+    background-color: var(--blue-color);
+    color: white;
+
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-form input.enter-account:hover {
+    background-color: #1c77c2;
+}
+
+.login-form a {
+    font-size: 17px;
+    text-decoration: none;
+    color: var(--blue-color);
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+.login-form input.create-account {
+    background-color: var(--green-color);
+    color: white;
+
+    width: auto;
+
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-form input.create-account:hover {
+    background-color: #268b19;
+}
+
+.right p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.right p span {
+    font-weight: bold;
+}
+
+.right p span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer {
+    padding: 30px 12px 30px 20px;
+    max-width: 1000px;
+}
+
+.languages-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: justify;
+}
+
+.languages-footer button {
+    font-size: 20px;
+    padding: 0 10px;
+    border-radius: 0;
+    border: 1px solid var(--gray-color);
+    text-align: center;
+    line-height: 0;
+}
+
+
+.languages-footer a {
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0px 10px;
+    color: var(--fonte-color);
+    line-height: 20px;
+}
+
+.languages-footer a:hover {
+    text-decoration: underline;
+}
+
+.div-line-footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: var(--gray-color);
+    border-radius: 2px;
+    height: 1px;
+}
+
+.languages-footer a.selected {
+    text-decoration: none;
+    cursor: text;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        height: 100%;
+    }
+
+    .main {
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-bottom: 60px;
+    }
+
+    .left {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left h2 {
+        text-align: center;
+    }
+
+    .right {
+        padding: 0 30px;
+    }
+}
